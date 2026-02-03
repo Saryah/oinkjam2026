@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bw5qg06rnjyfs"]
+
+[ext_resource type="Script" uid="uid://4064vurtp4pv" path="res://plant.gd" id="1_t03al"]
+[ext_resource type="Texture2D" uid="uid://c3lobefki4k2v" path="res://icon.svg" id="2_mbetm"]
+
+[node name="plant" type="Node2D" unique_id=147592561]
+script = ExtResource("1_t03al")
+growtime = 60.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1841017510]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mbetm")

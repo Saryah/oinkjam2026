@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bdvtr7geaon8a"]
+
+[ext_resource type="PackedScene" uid="uid://bw5qg06rnjyfs" path="res://plant.tscn" id="1_8u7dd"]
+[ext_resource type="Texture2D" uid="uid://dby8b7ag1oiag" path="res://Assets/lettuces0.png" id="2_56pol"]
+[ext_resource type="Texture2D" uid="uid://dgvuvke3w7da" path="res://Assets/lettuces1.png" id="3_vmkv8"]
+[ext_resource type="Texture2D" uid="uid://ujrfip6lxyhb" path="res://Assets/lettuces2.png" id="4_ecd5r"]
+[ext_resource type="Texture2D" uid="uid://drafrl420emo5" path="res://Assets/lettuces3.png" id="5_pf533"]
+[ext_resource type="Texture2D" uid="uid://cxlnkocnrkl0s" path="res://Assets/lettuces4.png" id="6_m4gxx"]
+
+[node name="plant" unique_id=147592561 instance=ExtResource("1_8u7dd")]
+textures = Array[Texture2D]([ExtResource("2_56pol"), ExtResource("3_vmkv8"), ExtResource("4_ecd5r"), ExtResource("5_pf533"), ExtResource("6_m4gxx")])
