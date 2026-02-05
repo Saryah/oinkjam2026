@@ -8,4 +8,5 @@
 [ext_resource type="Texture2D" uid="uid://cxlnkocnrkl0s" path="res://Assets/lettuces4.png" id="6_m4gxx"]
 
 [node name="plant" unique_id=147592561 instance=ExtResource("1_8u7dd")]
+growtime = 15.0
 textures = Array[Texture2D]([ExtResource("2_56pol"), ExtResource("3_vmkv8"), ExtResource("4_ecd5r"), ExtResource("5_pf533"), ExtResource("6_m4gxx")])

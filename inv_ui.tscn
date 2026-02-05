@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c6q73cyxcmb4j"]
+
+[ext_resource type="Script" uid="uid://brpyqj3y6eikt" path="res://inv_ui.gd" id="1_64hv7"]
+[ext_resource type="Texture2D" uid="uid://b04rnsmpkp8lx" path="res://Assets/box.png" id="2_s7you"]
+
+[node name="inv_ui" type="Control" unique_id=1702235503]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 345.0
+offset_bottom = 306.0
+script = ExtResource("1_64hv7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=276551755]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 571.0
+offset_bottom = 1060.0
+texture = ExtResource("2_s7you")
+patch_margin_left = 105
+patch_margin_top = 105
+patch_margin_right = 150
+patch_margin_bottom = 150

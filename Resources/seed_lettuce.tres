@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://din0qlkgjjw6t"]
+
+[ext_resource type="Script" uid="uid://cyx872c6deeu2" path="res://inventory_item.gd" id="1_1m7li"]
+[ext_resource type="Texture2D" uid="uid://dby8b7ag1oiag" path="res://Assets/lettuces0.png" id="2_u3e4u"]
+
+[resource]
+script = ExtResource("1_1m7li")
+name = "seed_lettuce"
+texture = ExtResource("2_u3e4u")
+metadata/_custom_type_script = "uid://cyx872c6deeu2"

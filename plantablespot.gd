@@ -1,7 +1,7 @@
 extends Area2D
 
-@export var row: int = 0
 @export var col: int = 0
+@export var row: int = 0
 @export var seed: String
 
 @onready var gc: Node2D = $"../.."
@@ -13,12 +13,21 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	polygon.polygon = collision.polygon
-	pass # Replace with function body.
+	connect("mouse_entered", on_hover)
+	connect("mouse_exited", on_unhover)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func on_hover():
+	polygon.color = gc.plot_color_highlighted
+
+
+func on_unhover():
+	polygon.color = gc.plot_color_normal
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://4vugy35ec3yv" path="res://gamecontroller.gd" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://wcqvo7oycf7l" path="res://Assets/bg00.png" id="1_lquwl"]
 [ext_resource type="Script" uid="uid://lwnnubrap0ti" path="res://plantablespot.gd" id="3_5vw27"]
+[ext_resource type="PackedScene" uid="uid://c6q73cyxcmb4j" path="res://inv_ui.tscn" id="4_1bvp3"]
 
 [node name="main" type="Node2D" unique_id=353706635]
 script = ExtResource("1_7mycd")
@@ -19,55 +20,100 @@ texture = ExtResource("1_lquwl")
 [node name="c6r1" type="Area2D" parent="Bg00" unique_id=89712875]
 position = Vector2(2, 0)
 script = ExtResource("3_5vw27")
-row = 5
 col = 6
+row = 1
 seed = "lettuce"
 
 [node name="collision" type="CollisionPolygon2D" parent="Bg00/c6r1" unique_id=537130670]
 position = Vector2(214.1, -993)
-polygon = PackedVector2Array(467, 484, 407, 720, 720, 721, 764, 491, 738, 472, 696, 459, 609, 451, 530, 459)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 758.9, 495, 721.9, 468, 609, 451, 514.9, 464)
 
 [node name="polygon" type="Polygon2D" parent="Bg00/c6r1" unique_id=1915296214]
 position = Vector2(214.1, -993)
-color = Color(0, 0, 0, 0.22745098)
-polygon = PackedVector2Array(467, 484, 407, 720, 720, 721, 764, 491, 738, 472, 696, 459, 609, 451, 530, 459)
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 758.9, 495, 721.9, 468, 609, 451, 514.9, 464)
 
 [node name="marker" type="Marker2D" parent="Bg00/c6r1" unique_id=134910362]
-position = Vector2(593, 597)
+position = Vector2(782, -456)
 
-[node name="c6r2" type="Polygon2D" parent="Bg00" unique_id=1518148236]
-position = Vector2(158, -744)
-color = Color(0, 0, 0, 0.22745098)
-polygon = PackedVector2Array(460, 473, 407, 720, 720, 721, 769, 473)
+[node name="c6r2" type="Area2D" parent="Bg00" unique_id=124447219]
+position = Vector2(157, -744)
+script = ExtResource("3_5vw27")
+col = 6
+row = 2
+seed = "lettuce"
 
-[node name="c6r3" type="Polygon2D" parent="Bg00" unique_id=195688437]
-position = Vector2(106, -495)
-color = Color(0, 0, 0, 0.22745098)
-polygon = PackedVector2Array(460, 473, 407, 720, 720, 721, 769, 473)
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c6r2" unique_id=740310750]
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
 
-[node name="c6r4" type="Polygon2D" parent="Bg00" unique_id=88183600]
-position = Vector2(53, -248)
-color = Color(0, 0, 0, 0.22745098)
-polygon = PackedVector2Array(460, 473, 407, 720, 720, 721, 769, 473)
+[node name="polygon" type="Polygon2D" parent="Bg00/c6r2" unique_id=36201206]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c6r2" unique_id=379175902]
+position = Vector2(571, 547)
+
+[node name="c6r3" type="Area2D" parent="Bg00" unique_id=345559561]
+position = Vector2(105, -496)
+script = ExtResource("3_5vw27")
+col = 6
+row = 3
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c6r3" unique_id=2120034811]
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c6r3" unique_id=35291727]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c6r3" unique_id=1333669315]
+position = Vector2(571, 540)
+
+[node name="c6r4" type="Area2D" parent="Bg00" unique_id=1214848452]
+position = Vector2(53, -247)
+script = ExtResource("3_5vw27")
+col = 6
+row = 4
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c6r4" unique_id=822385254]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c6r4" unique_id=532793248]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c6r4" unique_id=1338155924]
+position = Vector2(571, 540)
 
 [node name="c6r5" type="Area2D" parent="Bg00" unique_id=1804270292]
 script = ExtResource("3_5vw27")
-row = 5
 col = 6
+row = 5
 seed = "lettuce"
 
 [node name="collision" type="CollisionPolygon2D" parent="Bg00/c6r5" unique_id=1901993861]
-polygon = PackedVector2Array(460, 473, 407, 720, 720, 721, 769, 473)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
 
 [node name="polygon" type="Polygon2D" parent="Bg00/c6r5" unique_id=290537556]
-color = Color(0, 0, 0, 0.22745098)
-polygon = PackedVector2Array(460, 473, 407, 720, 720, 721, 769, 473)
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
 
 [node name="marker" type="Marker2D" parent="Bg00/c6r5" unique_id=478178822]
-position = Vector2(593, 597)
+position = Vector2(570, 550)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1551600650]
 zoom = Vector2(0.45, 0.45)
 
+[node name="inv_ui" parent="." unique_id=1702235503 instance=ExtResource("4_1bvp3")]
+offset_left = -1276.0
+offset_top = -713.0
+offset_right = -974.0
+offset_bottom = 189.0
+
 [connection signal="input_event" from="Bg00/c6r1" to="Bg00/c6r1" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c6r2" to="Bg00/c6r2" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c6r3" to="Bg00/c6r3" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c6r4" to="Bg00/c6r4" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r5" to="Bg00/c6r5" method="_on_input_event"]

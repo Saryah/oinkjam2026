@@ -18,6 +18,10 @@ extends Node2D
 
 }
 
+@export var plot_color_normal: Color = Color.hex(0x00000000)
+@export var plot_color_highlighted: Color = Color.hex(0x0000003a)
+
+@export var inv: Inv
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,9 +40,10 @@ func plant_seed(seed: String, plot: Node2D, quantity: int = 1):
 		plot.add_child(seed_new)
 		seed_new.position = Vector2.ZERO
 
+
 func harvest(plot: Node2D):
 	var plant = plot.get_child(0)
-	
+
 	if plant and plant.growtime_current >= plant.growtime:
 		#abandon and murder child
 		pass

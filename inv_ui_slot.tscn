@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bwba73f4uxkrl"]
+
+[node name="inv_ui_slot" type="Panel" unique_id=1551994993]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1029663779]
