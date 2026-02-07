@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dgv8geihryml"]
+
+[ext_resource type="PackedScene" uid="uid://bw5qg06rnjyfs" path="res://plant.tscn" id="1_t702k"]
+[ext_resource type="Texture2D" uid="uid://dwqdrxq5737u0" path="res://Assets/carrots0.png" id="2_xr2pr"]
+[ext_resource type="Texture2D" uid="uid://cjxdhkrx132xv" path="res://Assets/carrots1.png" id="3_6884t"]
+[ext_resource type="Texture2D" uid="uid://vqunbu7vqxlw" path="res://Assets/carrots2.png" id="4_5mgq6"]
+[ext_resource type="Texture2D" uid="uid://d07mp75gwea7g" path="res://Assets/carrots3.png" id="5_n28jo"]
+[ext_resource type="Texture2D" uid="uid://dfu0qlexj5ykt" path="res://Assets/carrots4.png" id="6_rx6j4"]
+[ext_resource type="Resource" uid="uid://tewtftjcmxy1" path="res://Resources/carrot.tres" id="7_6884t"]
+
+[node name="plant" unique_id=147592561 instance=ExtResource("1_t702k")]
+growtime = 10.0
+textures = Array[Texture2D]([ExtResource("2_xr2pr"), ExtResource("3_6884t"), ExtResource("4_5mgq6"), ExtResource("5_n28jo"), ExtResource("6_rx6j4")])
+item = ExtResource("7_6884t")

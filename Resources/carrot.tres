@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://tewtftjcmxy1"]
+
+[ext_resource type="Script" uid="uid://cyx872c6deeu2" path="res://inventory_item.gd" id="1_6wj42"]
+[ext_resource type="Texture2D" uid="uid://bsyropvbhgbar" path="res://Assets/carrot.png" id="2_6wj42"]
+
+[resource]
+script = ExtResource("1_6wj42")
+name = "carrot"
+texture = ExtResource("2_6wj42")
+sellable = true
+metadata/_custom_type_script = "uid://cyx872c6deeu2"

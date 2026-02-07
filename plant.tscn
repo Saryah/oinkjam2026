@@ -2,10 +2,16 @@
 
 [ext_resource type="Script" uid="uid://4064vurtp4pv" path="res://plant.gd" id="1_t03al"]
 [ext_resource type="Texture2D" uid="uid://c3lobefki4k2v" path="res://icon.svg" id="2_mbetm"]
+[ext_resource type="Script" uid="uid://cyx872c6deeu2" path="res://inventory_item.gd" id="2_qljma"]
+
+[sub_resource type="Resource" id="Resource_qljma"]
+script = ExtResource("2_qljma")
+metadata/_custom_type_script = "uid://cyx872c6deeu2"
 
 [node name="plant" type="Node2D" unique_id=147592561]
 script = ExtResource("1_t03al")
 growtime = 60.0
+item = SubResource("Resource_qljma")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1841017510]
 scale = Vector2(0.5, 0.5)

@@ -22,6 +22,8 @@ extends Node2D
 @export var plot_color_highlighted: Color = Color.hex(0x0000003a)
 
 @export var inv: Inv
+@export var item: InvItem
+@export var monies: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,9 +43,17 @@ func plant_seed(seed: String, plot: Node2D, quantity: int = 1):
 		seed_new.position = Vector2.ZERO
 
 
-func harvest(plot: Node2D):
-	var plant = plot.get_child(0)
+func harvest(plant: Node2D):
+	inv.insert(plant.item)
+	plant.remove_child(self)
+	plant.queue_free()
+	
+func sell_item():
+	monies =+ (item.sell_price*)
 
-	if plant and plant.growtime_current >= plant.growtime:
-		#abandon and murder child
-		pass
+func buy_item():
+	monies =- item.buy_price
+
+
+	
+	pass

@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://wcqvo7oycf7l" path="res://Assets/bg00.png" id="1_lquwl"]
 [ext_resource type="Script" uid="uid://lwnnubrap0ti" path="res://plantablespot.gd" id="3_5vw27"]
 [ext_resource type="PackedScene" uid="uid://c6q73cyxcmb4j" path="res://inv_ui.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c000hp5828i5p" path="res://shop_sell.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://c07ailuip1q1n" path="res://monies_label.gd" id="6_7mycd"]
 
 [node name="main" type="Node2D" unique_id=353706635]
 script = ExtResource("1_7mycd")
@@ -13,6 +15,8 @@ seeds = {
 "tomato": 0,
 "watermelon": 0
 }
+seeds_prefabs = null
+monies = null
 
 [node name="Bg00" type="Sprite2D" parent="." unique_id=1563652085]
 texture = ExtResource("1_lquwl")
@@ -107,10 +111,28 @@ position = Vector2(570, 550)
 zoom = Vector2(0.45, 0.45)
 
 [node name="inv_ui" parent="." unique_id=1702235503 instance=ExtResource("4_1bvp3")]
-offset_left = -1276.0
-offset_top = -713.0
-offset_right = -974.0
-offset_bottom = 189.0
+offset_left = -1255.0
+offset_top = -691.0
+offset_right = -699.0
+offset_bottom = 513.0
+
+[node name="shop_sell" parent="." unique_id=1327900691 instance=ExtResource("5_lquwl")]
+offset_left = -576.0
+offset_top = 260.0
+offset_right = 556.0
+offset_bottom = 718.0
+
+[node name="monies_label" type="Label" parent="." unique_id=1804846941]
+offset_left = 964.0
+offset_top = -673.0
+offset_right = 1204.0
+offset_bottom = -577.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 70
+text = "100000"
+script = ExtResource("6_7mycd")
 
 [connection signal="input_event" from="Bg00/c6r1" to="Bg00/c6r1" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r2" to="Bg00/c6r2" method="_on_input_event"]

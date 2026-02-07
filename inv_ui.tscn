@@ -2,22 +2,76 @@
 
 [ext_resource type="Script" uid="uid://brpyqj3y6eikt" path="res://inv_ui.gd" id="1_64hv7"]
 [ext_resource type="Texture2D" uid="uid://b04rnsmpkp8lx" path="res://Assets/box.png" id="2_s7you"]
+[ext_resource type="PackedScene" uid="uid://bwba73f4uxkrl" path="res://inv_ui_slot.tscn" id="3_cgw14"]
 
 [node name="inv_ui" type="Control" unique_id=1702235503]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 345.0
-offset_bottom = 306.0
+offset_right = 562.0
+offset_bottom = 1211.0
 script = ExtResource("1_64hv7")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=276551755]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 1.0
-offset_right = 571.0
-offset_bottom = 1060.0
+offset_right = 536.0
+offset_bottom = 1101.0
 texture = ExtResource("2_s7you")
 patch_margin_left = 105
 patch_margin_top = 105
 patch_margin_right = 150
 patch_margin_bottom = 150
+
+[node name="Button" type="Button" parent="NinePatchRect" unique_id=1292989904]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 963.0
+offset_right = 387.0
+offset_bottom = 1012.5
+text = "CLOSE [Tab]"
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1137828482]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -418.0
+offset_right = 152.0
+offset_bottom = 398.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="inv_ui_slot01" parent="NinePatchRect/GridContainer" unique_id=1551994993 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot02" parent="NinePatchRect/GridContainer" unique_id=1952119571 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot03" parent="NinePatchRect/GridContainer" unique_id=307235572 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot04" parent="NinePatchRect/GridContainer" unique_id=1729541919 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot05" parent="NinePatchRect/GridContainer" unique_id=722706562 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot06" parent="NinePatchRect/GridContainer" unique_id=808032882 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot07" parent="NinePatchRect/GridContainer" unique_id=636292886 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot08" parent="NinePatchRect/GridContainer" unique_id=541756642 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot09" parent="NinePatchRect/GridContainer" unique_id=897327825 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[node name="inv_ui_slot10" parent="NinePatchRect/GridContainer" unique_id=646744258 instance=ExtResource("3_cgw14")]
+layout_mode = 2
+
+[connection signal="pressed" from="NinePatchRect/Button" to="." method="inv_close_button_pressed"]

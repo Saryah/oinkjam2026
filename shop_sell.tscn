@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://c000hp5828i5p"]
+
+[ext_resource type="Script" uid="uid://ccxqn17uyl61u" path="res://shop_sell.gd" id="1_q2854"]
+[ext_resource type="Texture2D" uid="uid://b04rnsmpkp8lx" path="res://Assets/box.png" id="2_2p1tq"]
+[ext_resource type="PackedScene" uid="uid://bwba73f4uxkrl" path="res://inv_ui_slot.tscn" id="3_verbn"]
+[ext_resource type="PackedScene" uid="uid://dhvlr18nfinh" path="res://sell_panel.tscn" id="4_2p1tq"]
+
+[node name="shop_sell" type="Control" unique_id=1702235503]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 562.0
+offset_bottom = 1211.0
+script = ExtResource("1_q2854")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=276551755]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -25.0
+offset_right = 1135.0
+offset_bottom = 444.0
+texture = ExtResource("2_2p1tq")
+patch_margin_left = 105
+patch_margin_top = 105
+patch_margin_right = 150
+patch_margin_bottom = 150
+
+[node name="Button" type="Button" parent="NinePatchRect" unique_id=1292989904]
+layout_mode = 0
+offset_left = 903.0
+offset_top = 103.0
+offset_right = 1016.0
+offset_bottom = 232.0
+text = "CLOSE [S]"
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1137828482]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -473.0
+offset_top = -171.5
+offset_right = 277.0
+offset_bottom = 152.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="inv_ui_slot01" parent="NinePatchRect/GridContainer" unique_id=1551994993 instance=ExtResource("3_verbn")]
+layout_mode = 2
+
+[node name="inv_ui_slot02" parent="NinePatchRect/GridContainer" unique_id=1952119571 instance=ExtResource("3_verbn")]
+layout_mode = 2
+
+[node name="inv_ui_slot03" parent="NinePatchRect/GridContainer" unique_id=307235572 instance=ExtResource("3_verbn")]
+layout_mode = 2
+
+[node name="inv_ui_slot04" parent="NinePatchRect/GridContainer" unique_id=1729541919 instance=ExtResource("3_verbn")]
+layout_mode = 2
+
+[node name="inv_ui_slot05" parent="NinePatchRect/GridContainer" unique_id=722706562 instance=ExtResource("3_verbn")]
+layout_mode = 2
+
+[node name="inv_ui_slot06" parent="NinePatchRect/GridContainer" unique_id=808032882 instance=ExtResource("3_verbn")]
+layout_mode = 2
+
+[node name="Panel" parent="NinePatchRect" unique_id=1708946873 instance=ExtResource("4_2p1tq")]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 63.0
+offset_right = 844.0
+offset_bottom = 261.0
+
+[node name="TextEdit" type="TextEdit" parent="NinePatchRect" unique_id=1504786166]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 0.5764706)
+layout_mode = 0
+offset_left = 673.0
+offset_top = 273.0
+offset_right = 818.0
+offset_bottom = 319.0
+
+[node name="Button2" type="Button" parent="NinePatchRect" unique_id=1393867317]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 330.0
+offset_right = 819.0
+offset_bottom = 374.0
+text = "SELL [Enter]"
+
+[connection signal="pressed" from="NinePatchRect/Button" to="." method="inv_close_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/Button2" to="." method="inv_close_button_pressed"]

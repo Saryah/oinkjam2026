@@ -4,6 +4,7 @@ extends Area2D
 @export var row: int = 0
 @export var seed: String
 
+
 @onready var gc: Node2D = $"../.."
 @onready var marker: Marker2D = $marker
 @onready var collision: CollisionPolygon2D = $collision
@@ -35,3 +36,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		#This is what happens when you click a plantable spot
 		if marker.get_child_count() == 0:
 			gc.plant_seed(seed, marker)
+			
+		elif marker.get_child_count() == 1 and marker.get_child(0).growtime_current >= marker.get_child(0).growtime:
+				gc.harvest(marker.get_child(0)) 

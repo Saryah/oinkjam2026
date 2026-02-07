@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ddwy4a7wjysy2"]
+
+[ext_resource type="PackedScene" uid="uid://bw5qg06rnjyfs" path="res://plant.tscn" id="1_ujtfp"]
+[ext_resource type="Texture2D" uid="uid://chs6sf0ox4jm7" path="res://Assets/watermelons0.png" id="2_ofsqh"]
+[ext_resource type="Texture2D" uid="uid://bk0pr8wliekcy" path="res://Assets/watermelons1.png" id="3_0x48x"]
+[ext_resource type="Texture2D" uid="uid://5vaq20ot3f8p" path="res://Assets/watermelons2.png" id="4_cqc4u"]
+[ext_resource type="Texture2D" uid="uid://nist236b1bqx" path="res://Assets/watermelons3.png" id="5_6srj4"]
+[ext_resource type="Texture2D" uid="uid://bjv4lx34v3hx" path="res://Assets/watermelons4.png" id="6_dyldh"]
+[ext_resource type="Resource" uid="uid://cn0glyu286drx" path="res://Resources/watermelon.tres" id="7_ofsqh"]
+
+[node name="plant" unique_id=147592561 instance=ExtResource("1_ujtfp")]
+growtime = 120.0
+textures = Array[Texture2D]([ExtResource("2_ofsqh"), ExtResource("3_0x48x"), ExtResource("4_cqc4u"), ExtResource("5_6srj4"), ExtResource("6_dyldh")])
+item = ExtResource("7_ofsqh")

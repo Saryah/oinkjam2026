@@ -2,6 +2,7 @@ extends Node2D
 
 @export var growtime: float
 @export var textures: Array[Texture2D]
+@export var item: InvItem
 
 var growtime_current: float = 0
 
@@ -11,7 +12,7 @@ var growtime_current: float = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sprite.texture = textures[0]
-
+	#item = preload("uid://da2qw4adcj5hj")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

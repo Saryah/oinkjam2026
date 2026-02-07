@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ujrfip6lxyhb" path="res://Assets/lettuces2.png" id="4_ecd5r"]
 [ext_resource type="Texture2D" uid="uid://drafrl420emo5" path="res://Assets/lettuces3.png" id="5_pf533"]
 [ext_resource type="Texture2D" uid="uid://cxlnkocnrkl0s" path="res://Assets/lettuces4.png" id="6_m4gxx"]
+[ext_resource type="Resource" uid="uid://da2qw4adcj5hj" path="res://Resources/lettuce.tres" id="7_56pol"]
 
 [node name="plant" unique_id=147592561 instance=ExtResource("1_8u7dd")]
-growtime = 15.0
+growtime = 10.0
 textures = Array[Texture2D]([ExtResource("2_56pol"), ExtResource("3_vmkv8"), ExtResource("4_ecd5r"), ExtResource("5_pf533"), ExtResource("6_m4gxx")])
+item = ExtResource("7_56pol")

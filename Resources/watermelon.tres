@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://cn0glyu286drx"]
+
+[ext_resource type="Script" uid="uid://cyx872c6deeu2" path="res://inventory_item.gd" id="1_vgh0o"]
+[ext_resource type="Texture2D" uid="uid://b7evlpfw74f4m" path="res://Assets/waterlmeon.png" id="2_vgh0o"]
+
+[resource]
+script = ExtResource("1_vgh0o")
+name = "watermelon"
+texture = ExtResource("2_vgh0o")
+sellable = true
+metadata/_custom_type_script = "uid://cyx872c6deeu2"
