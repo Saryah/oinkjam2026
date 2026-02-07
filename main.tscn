@@ -15,8 +15,6 @@ seeds = {
 "tomato": 0,
 "watermelon": 0
 }
-seeds_prefabs = null
-monies = null
 
 [node name="Bg00" type="Sprite2D" parent="." unique_id=1563652085]
 texture = ExtResource("1_lquwl")

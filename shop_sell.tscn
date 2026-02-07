@@ -14,23 +14,13 @@ script = ExtResource("1_q2854")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=276551755]
 layout_mode = 0
-offset_left = -9.0
-offset_top = -25.0
-offset_right = 1135.0
-offset_bottom = 444.0
+offset_right = 1018.0
+offset_bottom = 469.0
 texture = ExtResource("2_2p1tq")
 patch_margin_left = 105
 patch_margin_top = 105
 patch_margin_right = 150
 patch_margin_bottom = 150
-
-[node name="Button" type="Button" parent="NinePatchRect" unique_id=1292989904]
-layout_mode = 0
-offset_left = 903.0
-offset_top = 103.0
-offset_right = 1016.0
-offset_bottom = 232.0
-text = "CLOSE [S]"
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1137828482]
 layout_mode = 1
@@ -39,9 +29,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -473.0
+offset_left = -398.0
 offset_top = -171.5
-offset_right = 277.0
+offset_right = 352.0
 offset_bottom = 152.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -49,6 +39,12 @@ columns = 3
 
 [node name="inv_ui_slot01" parent="NinePatchRect/GridContainer" unique_id=1551994993 instance=ExtResource("3_verbn")]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot01" unique_id=1208994082]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 151.0
+offset_bottom = 151.0
 
 [node name="inv_ui_slot02" parent="NinePatchRect/GridContainer" unique_id=1952119571 instance=ExtResource("3_verbn")]
 layout_mode = 2
@@ -65,28 +61,49 @@ layout_mode = 2
 [node name="inv_ui_slot06" parent="NinePatchRect/GridContainer" unique_id=808032882 instance=ExtResource("3_verbn")]
 layout_mode = 2
 
-[node name="Panel" parent="NinePatchRect" unique_id=1708946873 instance=ExtResource("4_2p1tq")]
+[node name="sell_panel" parent="NinePatchRect" unique_id=1708946873 instance=ExtResource("4_2p1tq")]
 layout_mode = 0
 offset_left = 644.0
 offset_top = 63.0
-offset_right = 844.0
-offset_bottom = 261.0
+offset_right = 825.0
+offset_bottom = 242.0
+script = null
 
-[node name="TextEdit" type="TextEdit" parent="NinePatchRect" unique_id=1504786166]
-self_modulate = Color(18.892157, 18.892157, 18.892157, 0.5764706)
+[node name="sell_one_button" type="Button" parent="NinePatchRect" unique_id=408290256]
 layout_mode = 0
-offset_left = 673.0
-offset_top = 273.0
-offset_right = 818.0
-offset_bottom = 319.0
+offset_left = 644.0
+offset_top = 276.0
+offset_right = 740.0
+offset_bottom = 320.0
+text = "SELL ON[E]"
 
-[node name="Button2" type="Button" parent="NinePatchRect" unique_id=1393867317]
+[node name="sell_ten_button" type="Button" parent="NinePatchRect" unique_id=1698863818]
 layout_mode = 0
-offset_left = 672.0
+offset_left = 747.0
+offset_top = 276.0
+offset_right = 843.0
+offset_bottom = 320.0
+text = "SELL [T]EN"
+
+[node name="sell_all_button" type="Button" parent="NinePatchRect" unique_id=1393867317]
+layout_mode = 0
+offset_left = 644.0
 offset_top = 330.0
-offset_right = 819.0
+offset_right = 844.0
 offset_bottom = 374.0
-text = "SELL [Enter]"
+text = "SELL [A]LL"
 
-[connection signal="pressed" from="NinePatchRect/Button" to="." method="inv_close_button_pressed"]
-[connection signal="pressed" from="NinePatchRect/Button2" to="." method="inv_close_button_pressed"]
+[node name="sell_shop_close" type="Button" parent="NinePatchRect" unique_id=1292989904]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 123.0
+offset_right = 924.0
+offset_bottom = 203.0
+text = "CLOSE 
+[S]"
+
+[connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot01/Button" to="NinePatchRect/GridContainer/inv_ui_slot01" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/sell_one_button" to="." method="_on_sell_one_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/sell_ten_button" to="." method="_on_sell_ten_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/sell_all_button" to="." method="_on_sell_all_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/sell_shop_close" to="." method="inv_close_button_pressed"]

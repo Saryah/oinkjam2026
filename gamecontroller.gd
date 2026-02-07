@@ -11,49 +11,73 @@ extends Node2D
 
 @export var seeds_prefabs: Dictionary = {
 
+	"lettuce": preload("uid://din0qlkgjjw6t"),
+	"tomato": preload("uid://5ulev4pdodoj"),
+	"carrot": preload("uid://b4c4f23u8wec6"),
+	"watermelon": preload("uid://cncdylephfcq1"),
+
+}
+
+@export var plant_prefabs: Dictionary = {
+
 	"lettuce": preload("uid://bdvtr7geaon8a"),
-	"tomato": preload("uid://bdvtr7geaon8a"), #TODO fix uid
-	"carrot": preload("uid://bdvtr7geaon8a"), #TODO fix uid
+	"tomato": preload("uid://cib8tng2subt5"),
+	"carrot": preload("uid://dgv8geihryml"), #TODO fix uid
 	"watermelon": preload("uid://bdvtr7geaon8a"), #TODO fix uid
 
 }
 
-@export var plot_color_normal: Color = Color.hex(0x00000000)
-@export var plot_color_highlighted: Color = Color.hex(0x0000003a)
+@export var plot_color_normal: Color = Color.html("#00000000")
+@export var plot_color_highlighted: Color = Color.html("#0000003a")
 
 @export var inv: Inv
 @export var item: InvItem
 @export var monies: int = 0
 
+var inv_mode: String
+var plantable_marker: Node
+
+@onready var monies_label: Label = $monies_label
+@onready var inv_ui: Control = $inv_ui
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	update_monies()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if plantable_marker:
+		plantable_marker.get_parent().polygon.color = plot_color_highlighted
+		
+
+func update_monies():
+	monies_label.text = "$" + str(monies)
 
 
 func plant_seed(seed: String, plot: Node2D, quantity: int = 1):
 	if seeds[seed] > 0:
-		seeds[seed] -= 1
-		var seed_new = seeds_prefabs[seed].instantiate()
+		seeds[seed] -= quantity
+		var seed_new = plant_prefabs[seed].instantiate()
 		plot.add_child(seed_new)
 		seed_new.position = Vector2.ZERO
-
+		inv.remove(seeds_prefabs[seed], quantity)
+		inv_ui.close()
+		
 
 func harvest(plant: Node2D):
 	inv.insert(plant.item)
-	plant.remove_child(self)
+	plant.get_parent().remove_child(plant)
 	plant.queue_free()
-	
-func sell_item():
-	monies =+ (item.sell_price*)
 
-func buy_item():
-	monies =- item.buy_price
+func clear_inv_mode():
+	if plantable_marker:
+		plantable_marker.get_parent().polygon.color = plot_color_normal
+	plantable_marker = null
+	inv_mode = ""
 
+#func buy_item():
+#	monies =- item.buy_price
 
-	
 	pass

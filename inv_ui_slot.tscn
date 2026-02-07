@@ -9,9 +9,9 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="inv_ui_slot" type="Panel" unique_id=1551994993]
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(160, 160)
-offset_right = 160.0
-offset_bottom = 160.0
+custom_minimum_size = Vector2(150, 150)
+offset_right = 150.0
+offset_bottom = 150.0
 script = ExtResource("1_l1ld1")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1341208831]
@@ -45,11 +45,3 @@ scale = Vector2(2.5, 2.5)
 text = "9"
 label_settings = SubResource("LabelSettings_l1ld1")
 horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="CenterContainer/Panel/Label" unique_id=1093747379]
-layout_mode = 0
-offset_left = 903.0
-offset_top = 103.0
-offset_right = 1016.0
-offset_bottom = 232.0
-text = "S - CLOSE"

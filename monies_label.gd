@@ -1,6 +1,6 @@
 extends Label
 
-@onready var gc: Node2D = $"res://gamecontroller.gd"
+#@onready var gc: Node2D = 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,5 +11,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func update_monies():
-	text ="Monies: " +str(gc.monies)
+#func update_monies():
+#	text ="Monies: " +str(gc.monies)

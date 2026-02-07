@@ -24,9 +24,9 @@ patch_margin_bottom = 150
 [node name="Button" type="Button" parent="NinePatchRect" unique_id=1292989904]
 layout_mode = 0
 offset_left = 127.0
-offset_top = 963.0
+offset_top = 947.0
 offset_right = 387.0
-offset_bottom = 1012.5
+offset_bottom = 996.5
 text = "CLOSE [Tab]"
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1137828482]
@@ -36,16 +36,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -172.0
-offset_top = -418.0
-offset_right = 152.0
-offset_bottom = 398.0
+offset_left = -165.0
+offset_top = -432.0
+offset_right = 145.0
+offset_bottom = 384.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 columns = 2
 
 [node name="inv_ui_slot01" parent="NinePatchRect/GridContainer" unique_id=1551994993 instance=ExtResource("3_cgw14")]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot01" unique_id=1623053947]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="inv_ui_slot02" parent="NinePatchRect/GridContainer" unique_id=1952119571 instance=ExtResource("3_cgw14")]
 layout_mode = 2
@@ -75,3 +86,4 @@ layout_mode = 2
 layout_mode = 2
 
 [connection signal="pressed" from="NinePatchRect/Button" to="." method="inv_close_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot01/Button" to="NinePatchRect/GridContainer/inv_ui_slot01" method="_inv_item_clicked"]

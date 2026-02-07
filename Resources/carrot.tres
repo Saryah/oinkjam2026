@@ -8,4 +8,5 @@ script = ExtResource("1_6wj42")
 name = "carrot"
 texture = ExtResource("2_6wj42")
 sellable = true
+sell_price = 5
 metadata/_custom_type_script = "uid://cyx872c6deeu2"

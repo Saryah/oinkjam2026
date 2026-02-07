@@ -34,8 +34,13 @@ func on_unhover():
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		#This is what happens when you click a plantable spot
-		if marker.get_child_count() == 0:
-			gc.plant_seed(seed, marker)
+		if marker.get_child_count() == 0:		
+			if gc.plantable_marker:
+				gc.clear_inv_mode()
+			gc.inv_mode = "seed_select"
+			gc.inv_ui.open()
+			gc.plantable_marker = marker
+			#gc.plant_seed(seed, marker)
 			
 		elif marker.get_child_count() == 1 and marker.get_child(0).growtime_current >= marker.get_child(0).growtime:
 				gc.harvest(marker.get_child(0)) 

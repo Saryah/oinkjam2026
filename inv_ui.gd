@@ -25,7 +25,9 @@ func _process(delta):
 func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
 		slots[i].update(inv.slots[i])
-
+		
+	for i in gc.seeds_prefabs:
+		gc.seeds[i] = inv.count(gc.seeds_prefabs[i]) 
 
 func open():
 	visible = true
@@ -35,6 +37,8 @@ func open():
 func close():
 	visible = false
 	is_open = false
+	gc.clear_inv_mode()
+	
 
 
 func inv_close_button_pressed() -> void:
