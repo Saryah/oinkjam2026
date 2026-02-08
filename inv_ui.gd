@@ -32,6 +32,12 @@ func update_slots():
 func open():
 	visible = true
 	is_open = true
+	for node in $NinePatchRect/GridContainer.get_children():
+		if (node._slot != null and node._slot.item != null and !node._slot.item.sellable) or gc.inv_mode == "":
+			node.visible = true
+		else:
+			node.visible = false
+
 
 
 func close():

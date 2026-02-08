@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c6q73cyxcmb4j" path="res://inv_ui.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c000hp5828i5p" path="res://shop_sell.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c07ailuip1q1n" path="res://monies_label.gd" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dynr3g4q8pfr3" path="res://shop_buy.tscn" id="6_272bh"]
 
 [node name="main" type="Node2D" unique_id=353706635]
 script = ExtResource("1_7mycd")
@@ -18,6 +19,441 @@ seeds = {
 
 [node name="Bg00" type="Sprite2D" parent="." unique_id=1563652085]
 texture = ExtResource("1_lquwl")
+
+[node name="c1r1" type="Area2D" parent="Bg00" unique_id=556354755]
+position = Vector2(-1424, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 1
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c1r1" unique_id=693602625]
+position = Vector2(214.1, -993)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 751.9, 491, 685.9, 465, 609.9, 453, 514.9, 465)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c1r1" unique_id=1449454101]
+position = Vector2(214.1, -993)
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 747.9, 489, 685.9, 463, 606.9, 455, 514.9, 464)
+
+[node name="marker" type="Marker2D" parent="Bg00/c1r1" unique_id=393226205]
+position = Vector2(782, -456)
+
+[node name="c1r2" type="Area2D" parent="Bg00" unique_id=2114432011]
+position = Vector2(-1269, -744)
+script = ExtResource("3_5vw27")
+col = 6
+row = 2
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c1r2" unique_id=845073912]
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c1r2" unique_id=1913927265]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c1r2" unique_id=8933043]
+position = Vector2(571, 547)
+
+[node name="c1r3" type="Area2D" parent="Bg00" unique_id=1029134287]
+position = Vector2(-1321, -496)
+script = ExtResource("3_5vw27")
+col = 6
+row = 3
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c1r3" unique_id=139266329]
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c1r3" unique_id=1174051070]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c1r3" unique_id=1064900213]
+position = Vector2(571, 540)
+
+[node name="c1r4" type="Area2D" parent="Bg00" unique_id=708457712]
+position = Vector2(-1373, -247)
+script = ExtResource("3_5vw27")
+col = 6
+row = 4
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c1r4" unique_id=279451533]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c1r4" unique_id=2635529]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c1r4" unique_id=823328022]
+position = Vector2(571, 540)
+
+[node name="c1r5" type="Area2D" parent="Bg00" unique_id=1227655487]
+position = Vector2(-1426, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 5
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c1r5" unique_id=1454958689]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c1r5" unique_id=1345344790]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c1r5" unique_id=150984002]
+position = Vector2(570, 550)
+
+[node name="c2r1" type="Area2D" parent="Bg00" unique_id=271521512]
+position = Vector2(-1136, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 1
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c2r1" unique_id=516287453]
+position = Vector2(214.1, -993)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 751.9, 491, 685.9, 465, 609.9, 453, 514.9, 465)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c2r1" unique_id=83236270]
+position = Vector2(214.1, -993)
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 747.9, 489, 685.9, 463, 606.9, 455, 514.9, 464)
+
+[node name="marker" type="Marker2D" parent="Bg00/c2r1" unique_id=464289266]
+position = Vector2(782, -456)
+
+[node name="c2r2" type="Area2D" parent="Bg00" unique_id=1122497258]
+position = Vector2(-981, -744)
+script = ExtResource("3_5vw27")
+col = 6
+row = 2
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c2r2" unique_id=1134059373]
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c2r2" unique_id=150134166]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c2r2" unique_id=1988582777]
+position = Vector2(571, 547)
+
+[node name="c2r3" type="Area2D" parent="Bg00" unique_id=1114056219]
+position = Vector2(-1033, -496)
+script = ExtResource("3_5vw27")
+col = 6
+row = 3
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c2r3" unique_id=16091296]
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c2r3" unique_id=2139995416]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c2r3" unique_id=66569269]
+position = Vector2(571, 540)
+
+[node name="c2r4" type="Area2D" parent="Bg00" unique_id=660827953]
+position = Vector2(-1085, -247)
+script = ExtResource("3_5vw27")
+col = 6
+row = 4
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c2r4" unique_id=2109234398]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c2r4" unique_id=530502986]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c2r4" unique_id=844316314]
+position = Vector2(571, 540)
+
+[node name="c2r5" type="Area2D" parent="Bg00" unique_id=1457397559]
+position = Vector2(-1138, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 5
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c2r5" unique_id=994003970]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c2r5" unique_id=1126030648]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c2r5" unique_id=1503163117]
+position = Vector2(570, 550)
+
+[node name="c3r1" type="Area2D" parent="Bg00" unique_id=1068844788]
+position = Vector2(-848, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 1
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c3r1" unique_id=1631778010]
+position = Vector2(214.1, -993)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 751.9, 491, 685.9, 465, 609.9, 453, 514.9, 465)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c3r1" unique_id=1013718954]
+position = Vector2(214.1, -993)
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 747.9, 489, 685.9, 463, 606.9, 455, 514.9, 464)
+
+[node name="marker" type="Marker2D" parent="Bg00/c3r1" unique_id=639000714]
+position = Vector2(782, -456)
+
+[node name="c3r2" type="Area2D" parent="Bg00" unique_id=627861778]
+position = Vector2(-693, -744)
+script = ExtResource("3_5vw27")
+col = 6
+row = 2
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c3r2" unique_id=1528123614]
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c3r2" unique_id=75029735]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c3r2" unique_id=133935034]
+position = Vector2(571, 547)
+
+[node name="c3r3" type="Area2D" parent="Bg00" unique_id=985395490]
+position = Vector2(-745, -496)
+script = ExtResource("3_5vw27")
+col = 6
+row = 3
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c3r3" unique_id=991227624]
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c3r3" unique_id=1596244936]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c3r3" unique_id=1731178037]
+position = Vector2(571, 540)
+
+[node name="c3r4" type="Area2D" parent="Bg00" unique_id=2044150053]
+position = Vector2(-797, -247)
+script = ExtResource("3_5vw27")
+col = 6
+row = 4
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c3r4" unique_id=1454405466]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c3r4" unique_id=1650840288]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c3r4" unique_id=1446376294]
+position = Vector2(571, 540)
+
+[node name="c3r5" type="Area2D" parent="Bg00" unique_id=1143075771]
+position = Vector2(-850, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 5
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c3r5" unique_id=1625189618]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c3r5" unique_id=1904920261]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c3r5" unique_id=1748575415]
+position = Vector2(570, 550)
+
+[node name="c4r1" type="Area2D" parent="Bg00" unique_id=1493713391]
+position = Vector2(-568, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 1
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c4r1" unique_id=1281925299]
+position = Vector2(214.1, -993)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 753.9, 477, 686.9, 457, 609, 451, 514.9, 464)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c4r1" unique_id=1583685625]
+position = Vector2(214.1, -993)
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 753.9, 477, 688.9, 457, 609, 451, 514.9, 464)
+
+[node name="marker" type="Marker2D" parent="Bg00/c4r1" unique_id=2108845792]
+position = Vector2(782, -456)
+
+[node name="c4r2" type="Area2D" parent="Bg00" unique_id=809821712]
+position = Vector2(-413, -744)
+script = ExtResource("3_5vw27")
+col = 6
+row = 2
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c4r2" unique_id=2075950593]
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c4r2" unique_id=1998469749]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c4r2" unique_id=1213608501]
+position = Vector2(571, 547)
+
+[node name="c4r3" type="Area2D" parent="Bg00" unique_id=423415223]
+position = Vector2(-465, -496)
+script = ExtResource("3_5vw27")
+col = 6
+row = 3
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c4r3" unique_id=1931430490]
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c4r3" unique_id=2047150749]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c4r3" unique_id=2104603914]
+position = Vector2(571, 540)
+
+[node name="c4r4" type="Area2D" parent="Bg00" unique_id=421686788]
+position = Vector2(-517, -247)
+script = ExtResource("3_5vw27")
+col = 6
+row = 4
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c4r4" unique_id=1587819548]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c4r4" unique_id=689407038]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c4r4" unique_id=1346702671]
+position = Vector2(571, 540)
+
+[node name="c4r5" type="Area2D" parent="Bg00" unique_id=1203052336]
+position = Vector2(-570, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 5
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c4r5" unique_id=490348042]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c4r5" unique_id=746736568]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c4r5" unique_id=636402653]
+position = Vector2(570, 550)
+
+[node name="c5r1" type="Area2D" parent="Bg00" unique_id=784899518]
+position = Vector2(-288, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 1
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c5r1" unique_id=1433059891]
+position = Vector2(214.1, -993)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 758.9, 495, 686.9, 457, 609, 451, 514.9, 464)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c5r1" unique_id=1538898358]
+position = Vector2(214.1, -993)
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(461.9, 487, 406.9, 721, 711.9, 721, 758.9, 495, 688.9, 457, 609, 451, 514.9, 464)
+
+[node name="marker" type="Marker2D" parent="Bg00/c5r1" unique_id=1598251840]
+position = Vector2(782, -456)
+
+[node name="c5r2" type="Area2D" parent="Bg00" unique_id=2027718607]
+position = Vector2(-133, -744)
+script = ExtResource("3_5vw27")
+col = 6
+row = 2
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c5r2" unique_id=689213782]
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c5r2" unique_id=668765761]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(466, 473, 409, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c5r2" unique_id=690627758]
+position = Vector2(571, 547)
+
+[node name="c5r3" type="Area2D" parent="Bg00" unique_id=21762580]
+position = Vector2(-185, -496)
+script = ExtResource("3_5vw27")
+col = 6
+row = 3
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c5r3" unique_id=1227620651]
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c5r3" unique_id=1332973374]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 408, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c5r3" unique_id=1865580225]
+position = Vector2(571, 540)
+
+[node name="c5r4" type="Area2D" parent="Bg00" unique_id=733176532]
+position = Vector2(-237, -247)
+script = ExtResource("3_5vw27")
+col = 6
+row = 4
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c5r4" unique_id=1294045328]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c5r4" unique_id=200818189]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c5r4" unique_id=850411887]
+position = Vector2(571, 540)
+
+[node name="c5r5" type="Area2D" parent="Bg00" unique_id=725551515]
+position = Vector2(-290, 0)
+script = ExtResource("3_5vw27")
+col = 6
+row = 5
+seed = "lettuce"
+
+[node name="collision" type="CollisionPolygon2D" parent="Bg00/c5r5" unique_id=1749954689]
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="polygon" type="Polygon2D" parent="Bg00/c5r5" unique_id=1450140673]
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(460, 473, 407, 720, 718, 720, 770, 473)
+
+[node name="marker" type="Marker2D" parent="Bg00/c5r5" unique_id=2003227100]
+position = Vector2(570, 550)
 
 [node name="c6r1" type="Area2D" parent="Bg00" unique_id=89712875]
 position = Vector2(2, 0)
@@ -109,16 +545,25 @@ position = Vector2(570, 550)
 zoom = Vector2(0.45, 0.45)
 
 [node name="inv_ui" parent="." unique_id=1702235503 instance=ExtResource("4_1bvp3")]
+visible = false
 offset_left = -1255.0
 offset_top = -691.0
 offset_right = -699.0
 offset_bottom = 513.0
 
 [node name="shop_sell" parent="." unique_id=1327900691 instance=ExtResource("5_lquwl")]
+visible = false
 offset_left = -576.0
 offset_top = 260.0
-offset_right = 556.0
-offset_bottom = 718.0
+offset_right = 426.0
+offset_bottom = 717.0
+
+[node name="shop_buy" parent="." unique_id=822417641 instance=ExtResource("6_272bh")]
+visible = false
+offset_left = -576.0
+offset_top = 260.0
+offset_right = 432.0
+offset_bottom = 713.0
 
 [node name="monies_label" type="Label" parent="." unique_id=1804846941]
 offset_left = 964.0
@@ -132,8 +577,35 @@ theme_override_font_sizes/font_size = 70
 text = "100000"
 script = ExtResource("6_7mycd")
 
+[connection signal="input_event" from="Bg00/c1r1" to="Bg00/c1r1" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c1r2" to="Bg00/c1r2" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c1r3" to="Bg00/c1r3" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c1r4" to="Bg00/c1r4" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c1r5" to="Bg00/c1r5" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c2r1" to="Bg00/c2r1" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c2r2" to="Bg00/c2r2" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c2r3" to="Bg00/c2r3" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c2r4" to="Bg00/c2r4" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c2r5" to="Bg00/c2r5" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c3r1" to="Bg00/c3r1" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c3r2" to="Bg00/c3r2" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c3r3" to="Bg00/c3r3" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c3r4" to="Bg00/c3r4" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c3r5" to="Bg00/c3r5" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c4r1" to="Bg00/c4r1" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c4r2" to="Bg00/c4r2" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c4r3" to="Bg00/c4r3" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c4r4" to="Bg00/c4r4" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c4r5" to="Bg00/c4r5" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c5r1" to="Bg00/c5r1" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c5r2" to="Bg00/c5r2" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c5r3" to="Bg00/c5r3" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c5r4" to="Bg00/c5r4" method="_on_input_event"]
+[connection signal="input_event" from="Bg00/c5r5" to="Bg00/c5r5" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r1" to="Bg00/c6r1" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r2" to="Bg00/c6r2" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r3" to="Bg00/c6r3" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r4" to="Bg00/c6r4" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r5" to="Bg00/c6r5" method="_on_input_event"]
+
+[editable path="inv_ui"]

@@ -42,24 +42,72 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot01" unique_id=1208994082]
 self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_right = 151.0
-offset_bottom = 151.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="inv_ui_slot02" parent="NinePatchRect/GridContainer" unique_id=1952119571 instance=ExtResource("3_verbn")]
 layout_mode = 2
 
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot02" unique_id=200970191]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="inv_ui_slot03" parent="NinePatchRect/GridContainer" unique_id=307235572 instance=ExtResource("3_verbn")]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot03" unique_id=2129434821]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="inv_ui_slot04" parent="NinePatchRect/GridContainer" unique_id=1729541919 instance=ExtResource("3_verbn")]
 layout_mode = 2
 
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot04" unique_id=1108598793]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="inv_ui_slot05" parent="NinePatchRect/GridContainer" unique_id=722706562 instance=ExtResource("3_verbn")]
 layout_mode = 2
 
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot05" unique_id=550232767]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="inv_ui_slot06" parent="NinePatchRect/GridContainer" unique_id=808032882 instance=ExtResource("3_verbn")]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/inv_ui_slot06" unique_id=1491641515]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="sell_panel" parent="NinePatchRect" unique_id=1708946873 instance=ExtResource("4_2p1tq")]
 layout_mode = 0
@@ -103,6 +151,11 @@ text = "CLOSE
 [S]"
 
 [connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot01/Button" to="NinePatchRect/GridContainer/inv_ui_slot01" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot02/Button" to="NinePatchRect/GridContainer/inv_ui_slot02" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot03/Button" to="NinePatchRect/GridContainer/inv_ui_slot03" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot04/Button" to="NinePatchRect/GridContainer/inv_ui_slot04" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot05/Button" to="NinePatchRect/GridContainer/inv_ui_slot03" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/inv_ui_slot06/Button" to="NinePatchRect/GridContainer/inv_ui_slot03" method="_on_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/sell_one_button" to="." method="_on_sell_one_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/sell_ten_button" to="." method="_on_sell_ten_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/sell_all_button" to="." method="_on_sell_all_button_pressed"]

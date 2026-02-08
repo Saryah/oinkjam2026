@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://deu0ruwjqu5ou"]
+
+[ext_resource type="Script" uid="uid://bvsfchbxr6asv" path="res://shop_buy_slot.gd" id="1_ha4nt"]
+[ext_resource type="Texture2D" uid="uid://cw6dml0gkitrw" path="res://Assets/panel.png" id="2_8s0vx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l1ld1"]
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="shop_buy_slot" type="Panel" unique_id=1551994993]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(150, 150)
+offset_right = 150.0
+offset_bottom = 150.0
+script = ExtResource("1_ha4nt")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1341208831]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
+texture = ExtResource("2_8s0vx")
+patch_margin_left = 38
+patch_margin_top = 38
+patch_margin_right = 38
+patch_margin_bottom = 38
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=253194535]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=1147782157]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel" unique_id=1945190552]
+scale = Vector2(0.8, 0.8)
+
+[node name="buy_item_price_label" type="Label" parent="CenterContainer/Panel" unique_id=960307342]
+layout_mode = 0
+offset_left = -36.000004
+offset_top = 16.0
+offset_right = -5.000004
+offset_bottom = 39.0
+scale = Vector2(2.5, 2.5)
+text = "9"
+label_settings = SubResource("LabelSettings_l1ld1")
+horizontal_alignment = 1

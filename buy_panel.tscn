@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://5afx8ija5lib"]
+
+[ext_resource type="Script" uid="uid://ddu6cst7fvk7i" path="res://shop_buy.gd" id="1_6mgb6"]
+[ext_resource type="Texture2D" uid="uid://cw6dml0gkitrw" path="res://Assets/panel.png" id="2_gdntm"]
+
+[node name="buy_panel" type="Panel" unique_id=1708946873]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 200.0
+offset_bottom = 198.0
+script = ExtResource("1_6mgb6")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1468861868]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 198.0
+texture = ExtResource("2_gdntm")
+patch_margin_left = 38
+patch_margin_top = 38
+patch_margin_right = 38
+patch_margin_bottom = 38
+
+[node name="buy_item_sprite" type="Sprite2D" parent="NinePatchRect" unique_id=32216012]
+position = Vector2(100, 110)
+
+[node name="buy_item_price_label" type="Label" parent="NinePatchRect" unique_id=453581122]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 44.0
+offset_right = 190.0
+offset_bottom = 86.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 30
+text = "99"
+horizontal_alignment = 1
+
+[node name="buy_static_label" type="Label" parent="NinePatchRect" unique_id=912888768]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 165.0
+offset_bottom = 50.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 26
+text = "Buy (each)"

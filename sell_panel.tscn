@@ -20,7 +20,7 @@ patch_margin_right = 38
 patch_margin_bottom = 38
 
 [node name="sell_item_sprite" type="Sprite2D" parent="NinePatchRect" unique_id=32216012]
-position = Vector2(98, 97)
+position = Vector2(100, 110)
 
 [node name="sell_item_label" type="Label" parent="NinePatchRect" unique_id=506278835]
 layout_mode = 0

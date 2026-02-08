@@ -32,13 +32,15 @@ extends Node2D
 
 @export var inv: Inv
 @export var item: InvItem
-@export var monies: int = 0
+@export var shop_inv: ShopInv
+@export var monies: int = 50
 
 var inv_mode: String
 var plantable_marker: Node
 
 @onready var monies_label: Label = $monies_label
 @onready var inv_ui: Control = $inv_ui
+@onready var shop_buy: Control = $shop_buy
 
 
 # Called when the node enters the scene tree for the first time.
@@ -50,7 +52,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if plantable_marker:
 		plantable_marker.get_parent().polygon.color = plot_color_highlighted
-		
+
 
 func update_monies():
 	monies_label.text = "$" + str(monies)
@@ -64,12 +66,13 @@ func plant_seed(seed: String, plot: Node2D, quantity: int = 1):
 		seed_new.position = Vector2.ZERO
 		inv.remove(seeds_prefabs[seed], quantity)
 		inv_ui.close()
-		
+
 
 func harvest(plant: Node2D):
 	inv.insert(plant.item)
 	plant.get_parent().remove_child(plant)
 	plant.queue_free()
+
 
 func clear_inv_mode():
 	if plantable_marker:
@@ -77,7 +80,8 @@ func clear_inv_mode():
 	plantable_marker = null
 	inv_mode = ""
 
-#func buy_item():
-#	monies =- item.buy_price
 
-	pass
+func buy_item(quantity: int = 1):
+	for i in quantity:
+		inv.insert(shop_buy.item)
+	monies -= (shop_buy.item.buy_price * quantity)

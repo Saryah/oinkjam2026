@@ -1,6 +1,6 @@
 extends Control
 
-var is_open = false
+var shop_sell_is_open = false
 var item: InvItem
 
 @onready var inv: Inv = preload("res://Resources/player_inv.tres")
@@ -9,6 +9,7 @@ var item: InvItem
 @onready var sell_sprite: Sprite2D = $NinePatchRect/sell_panel/NinePatchRect/sell_item_sprite
 @onready var sell_label: Label = $NinePatchRect/sell_panel/NinePatchRect/sell_item_label
 @onready var sell_price_label: Label = $NinePatchRect/sell_panel/NinePatchRect/sell_item_price_label
+@onready var shop_buy: Control = $"../shop_buy"
 
 
 func _ready():
@@ -27,9 +28,10 @@ func _process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("s"):
-		if is_open:
+		if shop_sell_is_open:
 			close()
 		else:
+			shop_buy.close()
 			open()
 
 
@@ -45,12 +47,12 @@ func update_slots():
 
 func open():
 	visible = true
-	is_open = true
+	shop_sell_is_open = true
 
 
 func close():
 	visible = false
-	is_open = false
+	shop_sell_is_open = false
 
 
 func inv_close_button_pressed() -> void:
