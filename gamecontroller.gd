@@ -25,8 +25,8 @@ extends Node2D
 
 	"lettuce": preload("uid://bdvtr7geaon8a"),
 	"tomato": preload("uid://cib8tng2subt5"),
-	"carrot": preload("uid://dgv8geihryml"), #TODO fix uid
-	"watermelon": preload("uid://bdvtr7geaon8a"), #TODO fix uid
+	"carrot": preload("uid://dgv8geihryml"),
+	"watermelon": preload("uid://ddwy4a7wjysy2"),
 
 }
 
@@ -36,7 +36,7 @@ extends Node2D
 @export var inv: Inv
 @export var item: InvItem
 @export var shop_inv: ShopInv
-@export var monies: int = 50
+@export var monies: int = 0
 @export var carrot_sold: int = 0
 @export var lettuce_sold: int = 0
 @export var tomato_sold: int = 0
@@ -99,6 +99,7 @@ func harvest(plant: Node2D):
 	inv.insert(plant.item)
 	plant.get_parent().remove_child(plant)
 	plant.queue_free()
+	sfx_harvest.playing = true
 
 
 func clear_inv_mode():
@@ -115,26 +116,28 @@ func buy_item(quantity: int = 1):
 
 
 func seed_unlock_check():
-	if carrot_sold >= 2 and lettuce_unlocked == false:
+	if carrot_sold >= 20 and lettuce_unlocked == false:
 		shop_inv.shop_insert(seeds_prefabs["lettuce"], 9999999)
 		lettuce_unlocked = true
-		monies -= 0
+		monies -= 75
 		#run cutscene???
-	elif lettuce_sold >= 2 and tomato_unlocked == false:
+	elif lettuce_sold >= 30 and tomato_unlocked == false:
 		shop_inv.shop_insert(seeds_prefabs["tomato"], 9999999)
 		tomato_unlocked = true
-	elif tomato_sold >= 2 and watermelon_unlocked == false:
+		monies -= 250
+		#run cutscene???
+	elif tomato_sold >= 50 and watermelon_unlocked == false:
 		shop_inv.shop_insert(seeds_prefabs["watermelon"], 9999999)
 		watermelon_unlocked = true
+		monies -= 750
+		#run cutscene???
 
 func _on_mute_button_pressed() -> void:
+	sfx_button_click.playing = true
 	if !music_muted:
 		music_muted = true
 		music.volume_linear = 0
 	else:
 		music_muted = false
 		music.volume_linear = 0.65	
-	
-
-#cutscene_01 ():
 	

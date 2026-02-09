@@ -28,6 +28,7 @@ func _process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("s"):
+		gc.sfx_button_click.playing = true
 		if shop_sell_is_open:
 			close()
 		else:
@@ -56,6 +57,7 @@ func close():
 
 
 func inv_close_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	close()
 
 
@@ -68,6 +70,7 @@ func clear():
 
 
 func _on_sell_one_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	if item:
 		if item.name == "carrot":
 			gc.carrot_sold += 1
@@ -85,6 +88,7 @@ func _on_sell_one_button_pressed() -> void:
 		
 
 func _on_sell_ten_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	if item:
 		if item.name == "carrot":
 			gc.carrot_sold += clamp(inv.count(item), 0, 10)
@@ -101,6 +105,7 @@ func _on_sell_ten_button_pressed() -> void:
 		gc.update_monies()
 
 func _on_sell_all_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	if item:
 		if item.name == "carrot":
 			gc.carrot_sold += inv.count(item)
@@ -118,8 +123,9 @@ func _on_sell_all_button_pressed() -> void:
 
 
 func _on_sell_ui_button_pressed() -> void:
-		if shop_sell_is_open:
-			close()
-		else:
-			shop_buy.close()
-			open()
+	gc.sfx_button_click.playing = true
+	if shop_sell_is_open:
+		close()
+	else:
+		shop_buy.close()
+		open()

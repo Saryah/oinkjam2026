@@ -7,6 +7,7 @@ var _slot: InvSlot
 @onready var buy_panel_sprite: Sprite2D = $"../../buy_panel/NinePatchRect/buy_item_sprite"
 @onready var panel_price_label: Label = $"../../buy_panel/NinePatchRect/buy_item_price_label"
 @onready var item_price_label: Label = $CenterContainer/Panel/buy_item_price_label
+@onready var gc: Node2D = $"../../../.."
 
 
 func update(slot: InvSlot):
@@ -21,10 +22,10 @@ func update(slot: InvSlot):
 		item_visual.texture = slot.item.texture
 		_slot = slot
 		item_price_label.text = "$" + str(_slot.item.buy_price)
-		
 
 
 func _on_button_pressed():
+	gc.sfx_button_click.playing = true
 	shop_buy.item = _slot.item
 	buy_panel_sprite.texture = item_visual.texture
 	panel_price_label.text = str(item_price_label.text)

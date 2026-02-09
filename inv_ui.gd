@@ -16,6 +16,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("tab"):
+		gc.sfx_button_click.playing = true
 		if is_open:
 			close()
 		else:
@@ -46,10 +47,12 @@ func close():
 	gc.clear_inv_mode()
 
 func inv_close_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	close()
 
 
 func _on_inv_ui_btn_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	if is_open:
 		close()
 	else:

@@ -25,20 +25,12 @@ func _process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("b"):
+		gc.sfx_button_click.playing = true
 		if shop_buy_is_open:
 			close()
 		else:
 			shop_sell.close()
 			open()
-
-func _shortcut_one(event):
-	if Input.is_action_just_pressed("e") and shop_buy_is_open == true:
-		_on_buy_one_button_pressed()
-		
-func _shortcut_ten(event):
-	if Input.is_action_just_pressed("t") and shop_buy_is_open == true:
-		_on_buy_ten_button_pressed()
-
 
 func update_slots():
 	for i in range(min(shop_inv.shop_slots.size(), shop_slots.size())):
@@ -61,10 +53,12 @@ func close():
 
 
 func shop_close_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	close()
 
 
 func _on_buy_one_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	if item and (gc.monies - item.buy_price) >= 0:
 		gc.buy_item(1)
 		gc.update_monies()
@@ -72,12 +66,14 @@ func _on_buy_one_button_pressed() -> void:
 
 
 func _on_buy_ten_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	if item and (gc.monies - (item.buy_price * 10)) >= 0:
 		gc.buy_item(10)
 		gc.update_monies()
 
 
 func _on_buy_ui_button_pressed() -> void:
+	gc.sfx_button_click.playing = true
 	if shop_buy_is_open:
 		close()
 	else:
