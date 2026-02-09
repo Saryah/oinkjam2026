@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var cutscene01: AnimationPlayer = $cutscene01/AnimationPlayer
+@onready var cutscene02: AnimationPlayer = $cutscene02/AnimationPlayer
 
 
 @export var seeds: Dictionary = {
@@ -119,17 +120,17 @@ func seed_unlock_check():
 	if carrot_sold >= 20 and lettuce_unlocked == false:
 		shop_inv.shop_insert(seeds_prefabs["lettuce"], 9999999)
 		lettuce_unlocked = true
-		monies -= 75
-		#run cutscene???
+		monies -= 35
+		cutscene02.play("cutscene02")
 	elif lettuce_sold >= 30 and tomato_unlocked == false:
 		shop_inv.shop_insert(seeds_prefabs["tomato"], 9999999)
 		tomato_unlocked = true
-		monies -= 250
+		monies -= 140
 		#run cutscene???
 	elif tomato_sold >= 50 and watermelon_unlocked == false:
 		shop_inv.shop_insert(seeds_prefabs["watermelon"], 9999999)
 		watermelon_unlocked = true
-		monies -= 750
+		monies -= 440
 		#run cutscene???
 
 func _on_mute_button_pressed() -> void:

@@ -55,6 +55,8 @@
 [ext_resource type="AudioStream" uid="uid://bgl5atpf1hru0" path="res://Sounds/button/button-08.mp3" id="51_53bls"]
 [ext_resource type="AudioStream" uid="uid://b45imdyxyl8rn" path="res://Sounds/button/button-09.mp3" id="52_lwnsi"]
 [ext_resource type="AudioStream" uid="uid://dlivpvs4rlkki" path="res://Sounds/button/button-10.mp3" id="53_41lik"]
+[ext_resource type="Texture2D" uid="uid://baito13bf2u0" path="res://Assets/cutebee.png" id="56_e71vb"]
+[ext_resource type="Texture2D" uid="uid://dfl353kktifax" path="res://Assets/mcsmile.png" id="56_rnkwl"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w48qg"]
 streams_count = 15
@@ -109,41 +111,136 @@ stream_11/stream = ExtResource("43_1yv1y")
 stream_12/stream = ExtResource("44_5yh34")
 stream_13/stream = ExtResource("45_pjuso")
 
-[sub_resource type="Animation" id="Animation_ycdy4"]
+[sub_resource type="Animation" id="Animation_rnkwl"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/McNormal:position")
+tracks/0/path = NodePath("AnimationPlayer/McPanel/MarginContainer/mc001:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1567, 433.99997)]
+"update": 1,
+"values": ["Urm, I think so:
+
+Click on stuff to plant and harvest
+S for Sell 
+B to Buy
+Click on the items in the shop to select them to sell or buy."]
 }
 
-[sub_resource type="Animation" id="Animation_w48qg"]
-resource_name = "cutscene01"
-length = 2.0
+[sub_resource type="Animation" id="Animation_ycdy4"]
+length = 40.633335
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/McNormal:position")
+tracks/0/path = NodePath("AnimationPlayer/mc:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.03333333, 2),
-"transitions": PackedFloat32Array(1.5157164, 1),
+"times": PackedFloat32Array(0, 0.53333336, 33.81411, 34.933334),
+"transitions": PackedFloat32Array(1, 6.062875, 1, 2.0705302),
 "update": 0,
-"values": [Vector2(1567, 433.99997), Vector2(646.9999, 425)]
+"values": [Vector2(1017, 1098), Vector2(1017.00006, 419.99997), Vector2(1017.00006, 420), Vector2(1017.00006, 1092)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/bee:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.8999987, 5.4333334, 33.81411, 34.933334),
+"transitions": PackedFloat32Array(1, 1, 3.249009, 1, 2.0705302),
+"update": 0,
+"values": [Vector2(-995.875, 1019.125), Vector2(-995.875, 1019.125), Vector2(-995.875, 395), Vector2(-995.875, 395), Vector2(-995.875, 1067)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/McPanel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.73, 4.54406, 7.75521, 8.891667, 21.963953, 25.130846, 28.846638, 31.851025),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/McPanel/MarginContainer/mc001:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.001, 0.73, 5.1000004, 7.7, 21.8393, 28.846638),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Wow I finally have my very own garden! I can't wait to dig in. Haha.
+
+Hmm, but how do I get started?", "Wow I finally have my very own garden! I can't wait to dig in. Haha.
+
+Hmm, but how do I get started?", "Wow I finally have my very own garden! I can't wait to dig in. Haha.
+
+Hmm, but how do I get started?", "Oh! Hello there.  Well sure, that would be great!", "Urm, I think so:
+
+Click on stuff to plant and harvest
+S for Sell 
+B to Buy
+Click on the items in the shop to select them to sell or buy.", "Okay. Also, why do you have so many astrixes on your text?"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/BeePanel:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5.269273, 6.9559393, 8.933333, 21.963953, 25.130846, 28.846638, 31.851025, 33.6178),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/BeePanel/MarginContainer/bee001:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.001, 8.85, 14.041366, 18.796522, 25.130846, 31.851025),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Can I bee of assistance?*", "Excellent, first take these five carrot seeds* to get started!
+
+Simply click or tap on any plot space, tap the seed you want to plant, and wait for it to grow!", "Once fully grown, tap the crop to harvest.
+
+You can sell crops* in the shop by tapping \"Sell\" or \"S\", tapping the crop in the sell window and choosing the sell amount.", "Buy more seeds* in the shop by tapping \"Buy\" or \"B\" in the same way.
+
+You got all that?", "You got it! 
+
+Once you've sold 20 carrots, the next seed type will be unlocked.*", "Don't worry about it."]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/mc:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 7.7552),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("13_ycdy4"), ExtResource("56_rnkwl")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vivmo"]
 _data = {
-&"RESET": SubResource("Animation_ycdy4"),
-&"cutscene01": SubResource("Animation_w48qg")
+&"RESET": SubResource("Animation_rnkwl"),
+&"cutscene01": SubResource("Animation_ycdy4")
 }
 
 [node name="main" type="Node2D" unique_id=353706635]
@@ -689,18 +786,20 @@ zoom = Vector2(0.75, 0.75)
 
 [node name="inv_ui" parent="." unique_id=1702235503 instance=ExtResource("4_1bvp3")]
 visible = false
-offset_left = -1255.0
-offset_top = -691.0
-offset_right = -699.0
-offset_bottom = 513.0
+offset_left = -1364.0
+offset_top = -529.0
+offset_right = -808.0
+offset_bottom = 675.0
 
 [node name="shop_sell" parent="." unique_id=1327900691 instance=ExtResource("5_lquwl")]
+visible = false
 offset_left = -576.0
 offset_top = 260.0
 offset_right = 426.0
 offset_bottom = 717.0
 
 [node name="shop_buy" parent="." unique_id=822417641 instance=ExtResource("6_272bh")]
+visible = false
 offset_left = -576.0
 offset_top = 260.0
 offset_right = 432.0
@@ -854,10 +953,10 @@ theme_override_font_sizes/font_size = 100
 text = "SELL"
 
 [node name="inv_ui_btn" type="NinePatchRect" parent="." unique_id=1270373852]
-offset_left = -1213.0
-offset_top = -818.0
-offset_right = -687.0
-offset_bottom = -521.0
+offset_left = -1373.0
+offset_top = -807.0
+offset_right = -847.0
+offset_bottom = -510.0
 texture = ExtResource("8_5vw27")
 patch_margin_left = 105
 patch_margin_top = 105
@@ -913,23 +1012,24 @@ position = Vector2(-1280, -720)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="cutscene01" unique_id=1920406412]
 libraries/ = SubResource("AnimationLibrary_vivmo")
 
-[node name="McNormal" type="Sprite2D" parent="cutscene01/AnimationPlayer" unique_id=1475220445]
-position = Vector2(1567, 433.99997)
+[node name="mc" type="Sprite2D" parent="cutscene01/AnimationPlayer" unique_id=1475220445]
+position = Vector2(1017, 1098)
 scale = Vector2(0.73301524, 0.7330154)
 texture = ExtResource("13_ycdy4")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="cutscene01/AnimationPlayer" unique_id=1869980524]
-offset_left = -576.0
-offset_top = 261.0
-offset_right = 445.0
-offset_bottom = 727.0
+[node name="McPanel" type="NinePatchRect" parent="cutscene01/AnimationPlayer" unique_id=1869980524]
+visible = false
+offset_left = 157.0
+offset_top = 60.0
+offset_right = 792.0
+offset_bottom = 718.0
 texture = ExtResource("8_5vw27")
 patch_margin_left = 105
 patch_margin_top = 105
 patch_margin_right = 130
 patch_margin_bottom = 130
 
-[node name="MarginContainer" type="MarginContainer" parent="cutscene01/AnimationPlayer/NinePatchRect" unique_id=1717213637]
+[node name="MarginContainer" type="MarginContainer" parent="cutscene01/AnimationPlayer/McPanel" unique_id=1717213637]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -943,11 +1043,60 @@ theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 100
 
-[node name="Label" type="Label" parent="cutscene01/AnimationPlayer/NinePatchRect/MarginContainer" unique_id=1323023841]
+[node name="mc001" type="Label" parent="cutscene01/AnimationPlayer/McPanel/MarginContainer" unique_id=1323023841]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+theme_override_colors/font_color = Color(0.31494337, 0.19367546, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Urm, I think so:
+
+Click on stuff to plant and harvest
+S for Sell 
+B to Buy
+Click on the items in the shop to select them to sell or buy."
+autowrap_mode = 3
+clip_text = true
+
+[node name="bee" type="Sprite2D" parent="cutscene01/AnimationPlayer" unique_id=207931763]
+z_index = 1
+position = Vector2(-995.875, 1019.125)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("56_e71vb")
+
+[node name="BeePanel" type="NinePatchRect" parent="cutscene01/AnimationPlayer" unique_id=1744115903]
+visible = false
+offset_left = -763.0
+offset_top = 60.0
+offset_right = -128.0
+offset_bottom = 718.0
+texture = ExtResource("8_5vw27")
+patch_margin_left = 105
+patch_margin_top = 105
+patch_margin_right = 130
+patch_margin_bottom = 130
+
+[node name="MarginContainer" type="MarginContainer" parent="cutscene01/AnimationPlayer/BeePanel" unique_id=1408816435]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -32.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="bee001" type="Label" parent="cutscene01/AnimationPlayer/BeePanel/MarginContainer" unique_id=1498112788]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.31494337, 0.19367546, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Can I bee of assistance?*"
 autowrap_mode = 3
 clip_text = true
 
