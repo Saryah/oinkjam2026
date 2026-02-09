@@ -13,10 +13,14 @@ config_version=5
 config/name="OinkJam2026"
 run/main_scene="uid://edvq8hrvqbcq"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/image="uid://fd15epvvjrk2"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=3500
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 
 [editor_plugins]

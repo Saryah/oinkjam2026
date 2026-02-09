@@ -124,4 +124,4 @@ text = "CLOSE
 [connection signal="pressed" from="NinePatchRect/GridContainer/shop_buy_slot04/Button" to="NinePatchRect/GridContainer/shop_buy_slot04" method="_on_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/buy_one_button" to="." method="_on_buy_one_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/buy_ten_button" to="." method="_on_buy_ten_button_pressed"]
-[connection signal="pressed" from="NinePatchRect/buy_shop_close" to="." method="inv_close_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/buy_shop_close" to="." method="shop_close_button_pressed"]

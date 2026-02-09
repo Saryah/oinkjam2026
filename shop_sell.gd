@@ -77,6 +77,7 @@ func _on_sell_one_button_pressed() -> void:
 			gc.tomato_sold += 1
 		elif item.name == "watermelon":
 			gc.watermelon_sold += 1
+		gc.seed_unlock_check()
 		gc.monies += item.sell_price
 		inv.remove(item, 1)
 		clear()
@@ -93,6 +94,7 @@ func _on_sell_ten_button_pressed() -> void:
 			gc.tomato_sold += clamp(inv.count(item), 0, 10)
 		elif item.name == "watermelon":
 			gc.watermelon_sold += clamp(inv.count(item), 0, 10)
+		gc.seed_unlock_check()
 		gc.monies += (item.sell_price * clamp(inv.count(item), 0, 10))
 		inv.remove(item, clamp(inv.count(item), 0, 10))
 		clear()
@@ -108,6 +110,7 @@ func _on_sell_all_button_pressed() -> void:
 			gc.tomato_sold += inv.count(item)
 		elif item.name == "watermelon":
 			gc.watermelon_sold += inv.count(item)
+		gc.seed_unlock_check()
 		gc.monies += (item.sell_price * inv.count(item))
 		inv.remove(item, inv.count(item))
 		clear()

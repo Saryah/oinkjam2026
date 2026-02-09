@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var cutscene01: AnimationPlayer = $cutscene01/AnimationPlayer
+
+
 @export var seeds: Dictionary = {
 
 	"lettuce": 0,
@@ -63,6 +66,7 @@ var plantable_marker: Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update_monies()
+	cutscene01.play("cutscene01")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -112,15 +116,15 @@ func buy_item(quantity: int = 1):
 
 func seed_unlock_check():
 	if carrot_sold >= 2 and lettuce_unlocked == false:
-		shop_inv.insert(seeds_prefabs["lettuce"], 9999999)
+		shop_inv.shop_insert(seeds_prefabs["lettuce"], 9999999)
 		lettuce_unlocked = true
-		monies -= 75
+		monies -= 0
 		#run cutscene???
-	elif lettuce_sold >= 30 and tomato_unlocked == false:
-		shop_inv.insert(seeds_prefabs["tomato"], 9999999)
+	elif lettuce_sold >= 2 and tomato_unlocked == false:
+		shop_inv.shop_insert(seeds_prefabs["tomato"], 9999999)
 		tomato_unlocked = true
-	elif tomato_sold >= 50 and watermelon_unlocked == false:
-		shop_inv.insert(seeds_prefabs["watermelon"], 9999999)
+	elif tomato_sold >= 2 and watermelon_unlocked == false:
+		shop_inv.shop_insert(seeds_prefabs["watermelon"], 9999999)
 		watermelon_unlocked = true
 
 func _on_mute_button_pressed() -> void:

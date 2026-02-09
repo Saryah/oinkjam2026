@@ -47,3 +47,10 @@ func close():
 
 func inv_close_button_pressed() -> void:
 	close()
+
+
+func _on_inv_ui_btn_button_pressed() -> void:
+	if is_open:
+		close()
+	else:
+		open()
