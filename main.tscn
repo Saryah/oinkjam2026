@@ -7,6 +7,17 @@
 [ext_resource type="PackedScene" uid="uid://c000hp5828i5p" path="res://shop_sell.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c07ailuip1q1n" path="res://monies_label.gd" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dynr3g4q8pfr3" path="res://shop_buy.tscn" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://b04rnsmpkp8lx" path="res://Assets/box.png" id="8_5vw27"]
+[ext_resource type="AudioStream" uid="uid://d3kgusnx0j366" path="res://Sounds/plant/plant-01.mp3" id="9_efxa6"]
+[ext_resource type="AudioStream" uid="uid://j7ssjripm27w" path="res://Sounds/plant/plant-02.mp3" id="10_dg77c"]
+[ext_resource type="AudioStream" uid="uid://dqvwedx73howq" path="res://Sounds/plant/plant-03.mp3" id="11_ycdy4"]
+[ext_resource type="AudioStream" uid="uid://i1p5oimgun25" path="res://Sounds/music/PigsGarden.mp3" id="12_dg77c"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w48qg"]
+streams_count = 3
+stream_0/stream = ExtResource("9_efxa6")
+stream_1/stream = ExtResource("10_dg77c")
+stream_2/stream = ExtResource("11_ycdy4")
 
 [node name="main" type="Node2D" unique_id=353706635]
 script = ExtResource("1_7mycd")
@@ -552,30 +563,190 @@ offset_right = -699.0
 offset_bottom = 513.0
 
 [node name="shop_sell" parent="." unique_id=1327900691 instance=ExtResource("5_lquwl")]
-visible = false
 offset_left = -576.0
 offset_top = 260.0
 offset_right = 426.0
 offset_bottom = 717.0
 
 [node name="shop_buy" parent="." unique_id=822417641 instance=ExtResource("6_272bh")]
-visible = false
 offset_left = -576.0
 offset_top = 260.0
 offset_right = 432.0
 offset_bottom = 713.0
 
 [node name="monies_label" type="Label" parent="." unique_id=1804846941]
-offset_left = 964.0
-offset_top = -673.0
-offset_right = 1204.0
-offset_bottom = -577.0
+offset_left = 884.0
+offset_top = -695.0
+offset_right = 1241.0
+offset_bottom = -552.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 70
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 104
 text = "100000"
+horizontal_alignment = 2
 script = ExtResource("6_7mycd")
+
+[node name="carrots_label" type="Label" parent="." unique_id=425025152]
+offset_left = 968.0
+offset_top = -319.0
+offset_right = 1262.0
+offset_bottom = -250.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Carrots Sold"
+
+[node name="carrots_sold_label" type="Label" parent="." unique_id=388590346]
+offset_left = 966.0
+offset_top = -258.0
+offset_right = 1260.0
+offset_bottom = -189.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2
+
+[node name="lettuce_label" type="Label" parent="." unique_id=710599414]
+offset_left = 965.0
+offset_top = -167.0
+offset_right = 1262.0
+offset_bottom = -98.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Lettuce Sold"
+
+[node name="lettuce_sold_label" type="Label" parent="." unique_id=1437672878]
+offset_left = 966.0
+offset_top = -106.0
+offset_right = 1260.0
+offset_bottom = -37.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2
+
+[node name="tomato_label" type="Label" parent="." unique_id=936946761]
+offset_left = 961.0
+offset_top = -7.0
+offset_right = 1263.0
+offset_bottom = 62.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Tomato Sold"
+
+[node name="tomato_sold_label" type="Label" parent="." unique_id=314087870]
+offset_left = 966.0
+offset_top = 54.0
+offset_right = 1260.0
+offset_bottom = 123.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2
+
+[node name="watermelon_label" type="Label" parent="." unique_id=1689389698]
+offset_left = 848.0
+offset_top = 145.0
+offset_right = 1263.0
+offset_bottom = 214.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Watermelon Sold"
+
+[node name="watermelon_sold_label" type="Label" parent="." unique_id=2141394215]
+offset_left = 966.0
+offset_top = 206.0
+offset_right = 1260.0
+offset_bottom = 275.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2
+
+[node name="buy_ui" type="NinePatchRect" parent="." unique_id=542720656]
+offset_left = -541.0
+offset_top = -818.0
+offset_right = -15.0
+offset_bottom = -521.0
+texture = ExtResource("8_5vw27")
+patch_margin_left = 105
+patch_margin_top = 105
+patch_margin_right = 130
+patch_margin_bottom = 130
+
+[node name="buy_ui_button" type="Button" parent="buy_ui" unique_id=1753119773]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 73.0
+offset_right = 483.0
+offset_bottom = 255.0
+
+[node name="buy_ui_label" type="Label" parent="buy_ui" unique_id=678763336]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 94.0
+offset_right = 349.0
+offset_bottom = 231.0
+theme_override_constants/outline_size = 21
+theme_override_font_sizes/font_size = 100
+text = "BUY"
+
+[node name="sell_ui" type="NinePatchRect" parent="." unique_id=907327880]
+offset_left = 155.0
+offset_top = -818.0
+offset_right = 681.0
+offset_bottom = -521.0
+texture = ExtResource("8_5vw27")
+patch_margin_left = 105
+patch_margin_top = 105
+patch_margin_right = 130
+patch_margin_bottom = 130
+
+[node name="sell_ui_button" type="Button" parent="sell_ui" unique_id=678988505]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 73.0
+offset_right = 483.0
+offset_bottom = 255.0
+
+[node name="sell_ui_label" type="Label" parent="sell_ui" unique_id=547823517]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 94.0
+offset_right = 349.0
+offset_bottom = 231.0
+theme_override_constants/outline_size = 21
+theme_override_font_sizes/font_size = 100
+text = "SELL"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1675582914]
+current = true
+
+[node name="plant" type="AudioStreamPlayer2D" parent="AudioListener2D" unique_id=1135372711]
+stream = SubResource("AudioStreamRandomizer_w48qg")
+
+[node name="harvest" type="AudioStreamPlayer2D" parent="AudioListener2D" unique_id=1452352187]
+stream = ExtResource("9_efxa6")
+
+[node name="button_click" type="AudioStreamPlayer2D" parent="AudioListener2D" unique_id=386404780]
+stream = ExtResource("9_efxa6")
+
+[node name="music" type="AudioStreamPlayer2D" parent="AudioListener2D" unique_id=1860076349]
+stream = ExtResource("12_dg77c")
+volume_db = -3.796
+autoplay = true
+
+[node name="Button" type="Button" parent="." unique_id=1645634743]
+offset_left = 897.0
+offset_top = 534.0
+offset_right = 1219.0
+offset_bottom = 661.0
+theme_override_font_sizes/font_size = 44
+text = "Toggle Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1203750366]
 
 [connection signal="input_event" from="Bg00/c1r1" to="Bg00/c1r1" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c1r2" to="Bg00/c1r2" method="_on_input_event"]
@@ -607,5 +778,8 @@ script = ExtResource("6_7mycd")
 [connection signal="input_event" from="Bg00/c6r3" to="Bg00/c6r3" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r4" to="Bg00/c6r4" method="_on_input_event"]
 [connection signal="input_event" from="Bg00/c6r5" to="Bg00/c6r5" method="_on_input_event"]
+[connection signal="pressed" from="buy_ui/buy_ui_button" to="shop_buy" method="_on_buy_ui_button_pressed"]
+[connection signal="pressed" from="sell_ui/sell_ui_button" to="shop_sell" method="_on_sell_ui_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_mute_button_pressed"]
 
 [editable path="inv_ui"]

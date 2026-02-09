@@ -34,13 +34,30 @@ extends Node2D
 @export var item: InvItem
 @export var shop_inv: ShopInv
 @export var monies: int = 50
+@export var carrot_sold: int = 0
+@export var lettuce_sold: int = 0
+@export var tomato_sold: int = 0
+@export var watermelon_sold: int = 0
+@export var lettuce_unlocked: bool = false
+@export var tomato_unlocked: bool = false
+@export var watermelon_unlocked: bool = false
+@export var music_muted: bool = false
 
 var inv_mode: String
 var plantable_marker: Node
 
+@onready var sfx_harvest: AudioStreamPlayer2D = $AudioListener2D/harvest
+@onready var sfx_button_click: AudioStreamPlayer2D = $AudioListener2D/button_click
+@onready var sfx_plant: AudioStreamPlayer2D = $AudioListener2D/plant
+@onready var music: AudioStreamPlayer2D = $AudioListener2D/music
+
 @onready var monies_label: Label = $monies_label
 @onready var inv_ui: Control = $inv_ui
 @onready var shop_buy: Control = $shop_buy
+@onready var carrots_sold_label: Label = $carrots_sold_label
+@onready var lettuce_sold_label: Label = $lettuce_sold_label
+@onready var tomato_sold_label: Label = $tomato_sold_label
+@onready var watermelon_sold_label: Label = $watermelon_sold_label
 
 
 # Called when the node enters the scene tree for the first time.
@@ -56,6 +73,10 @@ func _process(delta: float) -> void:
 
 func update_monies():
 	monies_label.text = "$" + str(monies)
+	carrots_sold_label.text = str(carrot_sold)
+	lettuce_sold_label.text = str(lettuce_sold)
+	tomato_sold_label.text = str(tomato_sold)
+	watermelon_sold_label.text = str(watermelon_sold)
 
 
 func plant_seed(seed: String, plot: Node2D, quantity: int = 1):
@@ -66,6 +87,8 @@ func plant_seed(seed: String, plot: Node2D, quantity: int = 1):
 		seed_new.position = Vector2.ZERO
 		inv.remove(seeds_prefabs[seed], quantity)
 		inv_ui.close()
+		sfx_plant.playing = true
+
 
 
 func harvest(plant: Node2D):
@@ -85,3 +108,29 @@ func buy_item(quantity: int = 1):
 	for i in quantity:
 		inv.insert(shop_buy.item)
 	monies -= (shop_buy.item.buy_price * quantity)
+
+
+func seed_unlock_check():
+	if carrot_sold >= 2 and lettuce_unlocked == false:
+		shop_inv.insert(seeds_prefabs["lettuce"], 9999999)
+		lettuce_unlocked = true
+		monies -= 75
+		#run cutscene???
+	elif lettuce_sold >= 30 and tomato_unlocked == false:
+		shop_inv.insert(seeds_prefabs["tomato"], 9999999)
+		tomato_unlocked = true
+	elif tomato_sold >= 50 and watermelon_unlocked == false:
+		shop_inv.insert(seeds_prefabs["watermelon"], 9999999)
+		watermelon_unlocked = true
+
+func _on_mute_button_pressed() -> void:
+	if !music_muted:
+		music_muted = true
+		music.volume_linear = 0
+	else:
+		music_muted = false
+		music.volume_linear = 0.65	
+	
+
+#cutscene_01 ():
+	

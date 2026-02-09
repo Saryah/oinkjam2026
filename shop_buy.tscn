@@ -49,6 +49,42 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="shop_buy_slot02" parent="NinePatchRect/GridContainer" unique_id=818361602 instance=ExtResource("3_s6hx6")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/shop_buy_slot02" unique_id=139212051]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="shop_buy_slot03" parent="NinePatchRect/GridContainer" unique_id=423127572 instance=ExtResource("3_s6hx6")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/shop_buy_slot03" unique_id=1980972965]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="shop_buy_slot04" parent="NinePatchRect/GridContainer" unique_id=747877851 instance=ExtResource("3_s6hx6")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="NinePatchRect/GridContainer/shop_buy_slot04" unique_id=1320127006]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="buy_panel" parent="NinePatchRect" unique_id=1708946873 instance=ExtResource("4_s6hx6")]
 layout_mode = 0
 offset_left = 644.0
@@ -83,6 +119,9 @@ text = "CLOSE
 [B]"
 
 [connection signal="pressed" from="NinePatchRect/GridContainer/shop_buy_slot01/Button" to="NinePatchRect/GridContainer/shop_buy_slot01" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/shop_buy_slot02/Button" to="NinePatchRect/GridContainer/shop_buy_slot02" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/shop_buy_slot03/Button" to="NinePatchRect/GridContainer/shop_buy_slot03" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/GridContainer/shop_buy_slot04/Button" to="NinePatchRect/GridContainer/shop_buy_slot04" method="_on_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/buy_one_button" to="." method="_on_buy_one_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/buy_ten_button" to="." method="_on_buy_ten_button_pressed"]
 [connection signal="pressed" from="NinePatchRect/buy_shop_close" to="." method="inv_close_button_pressed"]

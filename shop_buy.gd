@@ -75,3 +75,11 @@ func _on_buy_ten_button_pressed() -> void:
 	if item and (gc.monies - (item.buy_price * 10)) >= 0:
 		gc.buy_item(10)
 		gc.update_monies()
+
+
+func _on_buy_ui_button_pressed() -> void:
+	if shop_buy_is_open:
+		close()
+	else:
+		shop_sell.close()
+		open()

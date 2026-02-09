@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dhqf7lbl7ketk"]
+
+[ext_resource type="Texture2D" uid="uid://fd15epvvjrk2" path="res://Assets/mc_normal.png" id="1_rblcr"]
+
+[sub_resource type="Animation" id="Animation_cx2uc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/McNormal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(793.00006, 344.00003)]
+}
+
+[sub_resource type="Animation" id="Animation_bsv1l"]
+resource_name = "cutscene01"
+length = 8.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/McNormal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 0.0009999999, 0.100000024),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(489.00003, 368), Vector2(793.00006, 344.00003), Vector2(793.00006, 344.00003)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5urj"]
+_data = {
+&"RESET": SubResource("Animation_cx2uc"),
+&"cutscene01": SubResource("Animation_bsv1l")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" unique_id=735044567]
+libraries/ = SubResource("AnimationLibrary_i5urj")
+
+[node name="McNormal" type="Sprite2D" parent="." unique_id=1475220445]
+position = Vector2(931, 451)
+scale = Vector2(0.45534346, 0.45534354)
+texture = ExtResource("1_rblcr")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1869980524]
+offset_left = 273.0
+offset_top = 377.0
+offset_right = 754.0
+offset_bottom = 624.0

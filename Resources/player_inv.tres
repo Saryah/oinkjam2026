@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://natb15i1cx6b" path="res://inventory.gd" id="2_nfn3o"]
 [ext_resource type="Script" uid="uid://bguw6n0pb7g76" path="res://inv_slot.gd" id="2_subfo"]
-[ext_resource type="Resource" uid="uid://din0qlkgjjw6t" path="res://Resources/seed_lettuce.tres" id="3_nfn3o"]
+[ext_resource type="Resource" uid="uid://b4c4f23u8wec6" path="res://Resources/seed_carrot.tres" id="3_nfn3o"]
 
 [sub_resource type="Resource" id="Resource_subfo"]
 script = ExtResource("2_subfo")
 item = ExtResource("3_nfn3o")
-amount = 4
+amount = 5
 metadata/_custom_type_script = "uid://bguw6n0pb7g76"
 
 [sub_resource type="Resource" id="Resource_nfn3o"]

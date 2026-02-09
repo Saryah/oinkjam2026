@@ -44,8 +44,6 @@ func close():
 	visible = false
 	is_open = false
 	gc.clear_inv_mode()
-	
-
 
 func inv_close_button_pressed() -> void:
 	close()

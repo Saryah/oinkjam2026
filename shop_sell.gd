@@ -69,13 +69,30 @@ func clear():
 
 func _on_sell_one_button_pressed() -> void:
 	if item:
+		if item.name == "carrot":
+			gc.carrot_sold += 1
+		elif item.name == "lettuce":
+			gc.lettuce_sold += 1
+		elif item.name == "tomato":
+			gc.tomato_sold += 1
+		elif item.name == "watermelon":
+			gc.watermelon_sold += 1
 		gc.monies += item.sell_price
 		inv.remove(item, 1)
 		clear()
 		gc.update_monies()
+		
 
 func _on_sell_ten_button_pressed() -> void:
 	if item:
+		if item.name == "carrot":
+			gc.carrot_sold += clamp(inv.count(item), 0, 10)
+		elif item.name == "lettuce":
+			gc.lettuce_sold += clamp(inv.count(item), 0, 10)
+		elif item.name == "tomato":
+			gc.tomato_sold += clamp(inv.count(item), 0, 10)
+		elif item.name == "watermelon":
+			gc.watermelon_sold += clamp(inv.count(item), 0, 10)
 		gc.monies += (item.sell_price * clamp(inv.count(item), 0, 10))
 		inv.remove(item, clamp(inv.count(item), 0, 10))
 		clear()
@@ -83,7 +100,23 @@ func _on_sell_ten_button_pressed() -> void:
 
 func _on_sell_all_button_pressed() -> void:
 	if item:
+		if item.name == "carrot":
+			gc.carrot_sold += inv.count(item)
+		elif item.name == "lettuce":
+			gc.lettuce_sold += inv.count(item)
+		elif item.name == "tomato":
+			gc.tomato_sold += inv.count(item)
+		elif item.name == "watermelon":
+			gc.watermelon_sold += inv.count(item)
 		gc.monies += (item.sell_price * inv.count(item))
 		inv.remove(item, inv.count(item))
 		clear()
 		gc.update_monies()
+
+
+func _on_sell_ui_button_pressed() -> void:
+		if shop_sell_is_open:
+			close()
+		else:
+			shop_buy.close()
+			open()
